@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 # replica-count.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api-gateway
 spec:
+=======
+# replica-count.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+spec:
+>>>>>>> release
   replicas: 5

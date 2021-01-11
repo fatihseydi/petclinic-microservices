@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Service
 metadata:
@@ -18,3 +19,25 @@ spec:
     io.kompose.service: config-server
 status:
   loadBalancer: {}
+=======
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f k8s/docker-compose.yml -o k8s/base
+    kompose.image-pull-secret: regcred
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: config-server
+  name: config-server
+spec:
+  ports:
+    - name: "8888"
+      port: 8888
+      targetPort: 8888
+  selector:
+    io.kompose.service: config-server
+status:
+  loadBalancer: {}
+>>>>>>> release

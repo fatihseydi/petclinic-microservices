@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 # kustomization.yml
 namespace: "petclinic-staging-ns"
 bases:
 - ../base
 patches:
+=======
+# kustomization.yml
+namespace: "petclinic-staging-ns"
+bases:
+- ../base
+patches:
+>>>>>>> release
 - replica-count.yml
