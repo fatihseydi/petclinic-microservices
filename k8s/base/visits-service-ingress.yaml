@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    kompose.image-pull-secret: regcred
-    kompose.service.expose: petclinic.fatihseydi.com
-    kompose.version: 1.22.0 (955b78124)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: visits-service
-  name: visits-service
-spec:
-  rules:
-  - host: petclinic.fatihseydi.com
-      paths:
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/gateway(/|$)(.*)
-      - backend:
-          serviceName: customers-service
-          servicePort: 8081
-        path: /api/customer(/|$)(.*)
-=======
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -45,4 +19,3 @@ spec:
           serviceName: visits-service
           servicePort: 8082
         path: /api/visit(/|$)(.*)
->>>>>>> release
